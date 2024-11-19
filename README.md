@@ -1,4 +1,4 @@
-# ITU SDSE Project Model Validator Action
+# ITU BDS SDSE'24 - Project - Model Validator Action
 
 ## What is this?
 
