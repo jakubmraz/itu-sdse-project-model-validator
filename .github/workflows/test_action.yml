@@ -1,0 +1,31 @@
+# .github/workflows/run-model-inference.yml
+
+name: 'Run Model Inference Test'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upload-model:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4.1.7
+
+      - name: Upload Encrypted Model Artifact
+        uses: actions/upload-artifact@v4.4.0
+        with:
+          name: model
+          path: test/model/model.pkl.enc
+
+  run-inference:
+    needs: upload-model
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4.1.7
+
+      - name: Run Model Inference Test Action
+        uses: lasselundstenjensen/itu-sdse-project-model-validator@main
+        with:
+          model_password: ${{ secrets.MODEL_PASSWORD }}
