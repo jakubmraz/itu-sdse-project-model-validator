@@ -1,5 +1,3 @@
-# .github/workflows/run-model-inference.yml
-
 name: 'Run Model Inference Test'
 
 on:

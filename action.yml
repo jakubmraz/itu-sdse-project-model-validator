@@ -1,4 +1,3 @@
-# action.yml
 name: 'Run Model Inference Test'
 description: 'Downloads model artifact and runs inference test on it.'
 inputs:
