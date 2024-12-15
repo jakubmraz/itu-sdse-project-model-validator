@@ -43,6 +43,7 @@ runs:
         import pandas as pd
         import joblib
         import numpy as np
+        import xgboost
 
         # Load the downloaded model
         with open("model/model.pkl", "rb") as f:
