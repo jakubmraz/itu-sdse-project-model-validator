@@ -44,7 +44,6 @@ runs:
         import joblib
         import numpy as np
         import xgboost
-        import mlflow
 
         # Load the downloaded model
         with open("model/model.pkl", "rb") as f:
