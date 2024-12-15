@@ -34,7 +34,7 @@ runs:
 
     - name: Install dependencies
       run: |
-        pip install scikit-learn pandas joblib xgboost
+        pip install scikit-learn pandas joblib xgboost mlflow
       shell: bash
 
     - name: Run inference test
