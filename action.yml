@@ -44,6 +44,7 @@ runs:
         import joblib
         import numpy as np
         import xgboost
+        import mlflow
 
         class lr_wrapper(mlflow.pyfunc.PythonModel):
           def __init__(self, model):
